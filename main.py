@@ -1,14 +1,13 @@
 __author__ = 'willb'
-import scripts.screenmain as screenmain
-import scripts.flaskserver as flaskserver
 import webview
 import requests
 import os
+import sys
 class main():
+    def main_ui(self):
+        
     def __init__(self):
-        print "Starting ui"
-        os.system("python {0}/scripts/screenmain.py".format(os.getcwd()))
-        print "Starting flask"
-        flaskserver.start()
+        easygui.msgbox("Welcome to the Wall Program")
+        choice=main_ui()
 if __name__ == "__main__":
     main()
