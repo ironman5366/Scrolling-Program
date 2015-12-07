@@ -1,4 +1,0 @@
-2015-12-06 15:09:48: Opened and created logs
-2015-12-06 15:09:48: In main
-2015-12-06 15:09:48: Starting flask
-2015-12-06 15:09:48: Closed logs

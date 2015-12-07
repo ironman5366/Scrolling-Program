@@ -1,0 +1,5 @@
+weather:30
+weekview:30
+dayview:30
+alarm:30
+timescreen:30
