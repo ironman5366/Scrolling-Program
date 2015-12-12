@@ -26,7 +26,7 @@ class main():
         if choice=="Start":
             self.start()
         elif choice=="Settings":
-            settings.main()
+            settings.main().settings_ui()
         elif choice=="Exit":
             sys.exit()
         elif choice==None:
