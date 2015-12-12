@@ -1,10 +1,10 @@
 __author__ = 'willb'
 import scripts.settings as settings
-from multiprocessing import Pool
 import webview
 import time
 import thread
 import sys
+import os
 status=True
 categories=['dayview','weekview','weather','timescreen','alarm']
 catnum=0
@@ -41,11 +41,11 @@ class main():
                 elif cat==categories[1]:
                     caturl="https://calendar.google.com/?mode=week"
                 elif cat==categories[2]:
-                    caturl="file:html/weather.html"
+                    caturl="{0}/html/weather.html".format(os.getcwd())
                 elif cat==categories[3]:
-                    caturl="file:html/timescreen.html"
+                    caturl="{0}/html/timescreen.html".format(os.getcwd())
                 elif cat==categories[4]:
-                    caturl="file:html/alarm.html"
+                    caturl="{0}/html/alarm.html".format(os.getcwd())
                 else:
                     print "Unrecognized category {0}".format(cat)
                     sys.exit()
