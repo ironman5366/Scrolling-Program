@@ -61,5 +61,5 @@ class main():
                             break
     def start(self):
         thread.start_new_thread( self.counter, (2,"https://calendar.google.com?mode=day",0,) )
-        webview.create_window("wall program","html/start.html")
+        webview.create_window("wall program","html/start.html", fullscreen=True)
 
