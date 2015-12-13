@@ -33,9 +33,9 @@ class main():
         settingschoices=[
             "Day view duration",
             "Week view duration",
-            "Alarm Duration",
             "Weather Duration",
-            "Time & Date duration"
+            "Time & Date duration",
+            "Change Last line of time screen"
         ]
         sc=easygui.choicebox(msg="Please make a selection", title="Wall Program", choices=settingschoices)
         if sc==settingschoices[0]:
@@ -43,13 +43,21 @@ class main():
         elif sc==settingschoices[1]:
             scn="weekview"
         elif sc==settingschoices[2]:
-            scn="alarm"
-        elif sc==settingschoices[3]:
             scn="weather"
-        elif sc==settingschoices[4]:
+        elif sc==settingschoices[3]:
             scn="timescreen"
+        elif sc==settingschoices[4]:
+            newline=easygui.enterbox("What should it say?")
+            f=open('html/timescreen.html').read()
+            current=f.split('id="lastline">')[1].split("<")[0]
+            newf=f.replace(current,newline)
+            f.close()
+            finalfile=open('html/timescreen.html','w')
+            finalfile.write(newf)
+            finalfile.close()
         elif sc==None:
             sys.exit()
+
         else:
             print "Unrecognized choice {0}".format(sc)
             sys.exit()

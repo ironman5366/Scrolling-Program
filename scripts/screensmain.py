@@ -6,7 +6,7 @@ import thread
 import sys
 import os
 status=True
-categories=['dayview','weekview','weather','timescreen','alarm']
+categories=['dayview','weekview','weather','timescreen']
 catnum=0
 class main():
     catnum=0
@@ -44,8 +44,6 @@ class main():
                     caturl="{0}/html/weather.html".format(os.getcwd())
                 elif cat==categories[3]:
                     caturl="{0}/html/timescreen.html".format(os.getcwd())
-                elif cat==categories[4]:
-                    caturl="{0}/html/alarm.html".format(os.getcwd())
                 else:
                     print "Unrecognized category {0}".format(cat)
                     sys.exit()
