@@ -48,13 +48,15 @@ class main():
             scn="timescreen"
         elif sc==settingschoices[4]:
             newline=easygui.enterbox("What should it say?")
-            f=open('html/timescreen.html').read()
+            tf=open('html/timescreen.html')
+            f=tf.read()
             current=f.split('id="lastline">')[1].split("<")[0]
             newf=f.replace(current,newline)
-            f.close()
+            tf.close()
             finalfile=open('html/timescreen.html','w')
             finalfile.write(newf)
             finalfile.close()
+            sys.exit()
         elif sc==None:
             sys.exit()
 
