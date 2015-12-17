@@ -1,0 +1,17 @@
+[Application]
+name=Wall Program
+version=1.6
+# How to launch the app - this calls the 'main' function from the 'myapp' package:
+entry_point=start:main
+icon=program-files/wall.ico
+
+[Python]
+version=2.7.10
+
+[Include]
+# Importable packages that your application requires, one per line
+packages = os
+# Other files and folders that should be installed
+files = program-files/
+    html/
+    scripts/

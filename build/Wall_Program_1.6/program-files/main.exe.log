@@ -1,0 +1,14 @@
+Unhandled exception in thread started by <bound method main.counter of <scripts.screensmain.main instance at 0x00000000030A1AC8>>
+Traceback (most recent call last):
+  File "scripts\screensmain.pyc", line 38, in counter
+  File "scripts\screensmain.pyc", line 16, in get_duration
+  File "scripts\settings.pyc", line 5, in get_setting
+IOError: [Errno 2] No such file or directory: 'program-files/settings.txt'
+Traceback (most recent call last):
+  File "main.py", line 38, in <module>
+    main()
+  File "main.py", line 29, in __init__
+    settings.main().settings_ui()
+  File "scripts\settings.pyc", line 54, in settings_ui
+    
+TypeError: expected a character buffer object
